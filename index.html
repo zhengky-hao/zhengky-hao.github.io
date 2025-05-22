@@ -15,6 +15,18 @@
       padding-top: 60px;
     }
 
+    /* 顶部阅读进度条样式 */
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 5px;
+      background-color: #007acc;
+      z-index: 9999;
+      transition: width 0.2s ease-out;
+    }
+
     .container {
       max-width: 950px;
       margin: auto;
@@ -119,6 +131,10 @@
 </head>
 <body>
 
+  <!-- 页面阅读进度条 -->
+  <div id="progressBar"></div>
+
+  <!-- 顶部导航 -->
   <nav>
     <a href="#edu">教育背景</a>
     <a href="#pub">论文发表</a>
@@ -190,12 +206,16 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
+    AOS.init({ duration: 800, once: true });
+
+    // 页面阅读进度条逻辑
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      document.getElementById("progressBar").style.width = progress + "%";
     });
   </script>
-
 </body>
 </html>
 
