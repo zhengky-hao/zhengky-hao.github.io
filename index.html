@@ -1,87 +1,219 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>郑开元 | CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
-      background: #f9f9f9;
+      background: #eef1f5;
       color: #333;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 0;
+      padding-top: 60px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 30px;
       background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
     }
-    h1, h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      text-align: center;
+      z-index: 1000;
     }
-    ul {
-      padding-left: 1.2em;
-    }
-    .tag {
-      display: inline-block;
-      background: #007acc;
-      color: white;
-      padding: 2px 8px;
-      margin: 4px 4px 0 0;
-      border-radius: 4px;
-      font-size: 0.9em;
-    }
-    a {
+
+    nav a {
+      margin: 0 15px;
       color: #007acc;
       text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      border-left: 6px solid #007acc;
+      padding-left: 10px;
+      margin-top: 40px;
+      color: #007acc;
+    }
+
+    .card {
+      background: #f7f9fc;
+      border-left: 4px solid #007acc;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 3px solid #007acc;
+    }
+
+    .timeline-item {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: #007acc;
+      border-radius: 50%;
+    }
+
+    .skill-bar {
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .skill-bar span {
+      display: block;
+      background: #007acc;
+      height: 20px;
+      line-height: 20px;
+      color: white;
+      padding-left: 10px;
+      font-size: 0.9em;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #007acc;
+      color: white;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005f99;
+    }
+
+    .highlight {
+      background: #f0f8ff;
+      padding: 3px 6px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
 
-  <h1>郑开元</h1>
-  <p>研究兴趣：自然语言处理、大语言模型</p>
+  <nav>
+    <a href="#edu">教育背景</a>
+    <a href="#pub">论文发表</a>
+    <a href="#proj">项目经历</a>
+    <a href="#skills">技能</a>
+    <a href="#honor">荣誉</a>
+    <a href="#contact">联系方式</a>
+  </nav>
 
-  <h2>教育背景</h2>
-  <ul>
-    <li>北京师范大学珠海校区 · 文理学院 · 人工智能（本科生，2022 - 2026）</li>
-  </ul>
+  <div class="container">
 
-  <h2>论文发表</h2>
-  <ul>
-    <li><strong>Reassessing the Role of Chain-of-Thought in Sentiment Analysis: Insights and Limitations</strong>  
-      <br><em>第一作者，ICIC 2025, CCF-C, Oral Presentation</em>
-    </li>
-    <li><strong>Dynamic Dependent Task Scheduling for Real-Time Multi-edge-node Collaboration Computing</strong>  
-      <br><em>第二作者，SCECS 2025, EI Conference, Best Student Paper Award</em>
-    </li>
-  </ul>
+    <h1 data-aos="fade-down">郑开元</h1>
+    <p data-aos="fade-up"><i class="fas fa-brain"></i> <strong>研究兴趣：</strong>自然语言处理、大语言模型</p>
 
-  <h2>项目经历</h2>
-  <ul>
-    <li><strong>南京大学本科生NLP暑期夏令营</strong>（2024）：优秀营员</li>
-    <li><strong>广东省科技创新战略专项资金（大学生科技创新培育）项目</strong>（2023）：项目核心成员</li>
-  </ul>
+    <h2 id="edu" data-aos="fade-right"><i class="fas fa-graduation-cap"></i> 教育背景</h2>
+    <div class="card" data-aos="fade-up">
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>北京师范大学珠海校区 · 文理学院</strong><br>人工智能（本科生，2022 - 2026）
+        </div>
+      </div>
+    </div>
 
-  <h2>技能标签</h2>
-  <div>
-    <span class="tag">Python</span>
-    <span class="tag">PyTorch</span>
-    <span class="tag">Git</span>
-    <span class="tag">Latex</span>
+    <h2 id="pub" data-aos="fade-right"><i class="fas fa-file-alt"></i> 论文发表</h2>
+    <div class="card" data-aos="fade-up">
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Reassessing the Role of Chain-of-Thought in Sentiment Analysis</strong><br>
+          <em>第一作者，ICIC 2025, CCF-C, Oral Presentation</em>
+        </div>
+        <div class="timeline-item">
+          <strong>Dynamic Dependent Task Scheduling for Real-Time Multi-edge-node Collaboration Computing</strong><br>
+          <em>第二作者，SCECS 2025, EI Conference, Best Student Paper Award</em>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="proj" data-aos="fade-right"><i class="fas fa-laptop-code"></i> 项目经历</h2>
+    <div class="card" data-aos="fade-up">
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>南京大学本科生NLP暑期夏令营</strong>（2024）：优秀营员
+        </div>
+        <div class="timeline-item">
+          <strong>广东省科技创新专项资金项目</strong>（2023）：项目核心成员
+        </div>
+      </div>
+    </div>
+
+    <h2 id="skills" data-aos="fade-right"><i class="fas fa-tools"></i> 技能熟练度</h2>
+    <div class="card" data-aos="zoom-in">
+      <div class="skill-bar"><span style="width: 90%;">Python - 90%</span></div>
+      <div class="skill-bar"><span style="width: 85%;">PyTorch - 85%</span></div>
+      <div class="skill-bar"><span style="width: 80%;">Git - 80%</span></div>
+      <div class="skill-bar"><span style="width: 75%;">LaTeX - 75%</span></div>
+    </div>
+
+    <h2 id="honor" data-aos="fade-right"><i class="fas fa-award"></i> 荣誉与奖励</h2>
+    <div class="card" data-aos="fade-up">
+      <ul>
+        <li><strong>国家奖学金</strong>（2024年）</li>
+      </ul>
+    </div>
+
+    <h2 id="contact" data-aos="fade-right"><i class="fas fa-envelope"></i> 联系方式</h2>
+    <div class="card" data-aos="fade-up">
+      <div><i class="fas fa-envelope"></i> 邮箱：<span class="highlight">zhky@mail.bnu.edu.cn</span></div>
+      <div><i class="fab fa-github"></i> GitHub：
+        <a href="https://github.com/zhengky-hao" target="_blank" class="btn">访问 GitHub</a>
+      </div>
+    </div>
+
   </div>
 
-  <h2>荣誉与奖励</h2>
-  <ul>
-    <li><strong>国家奖学金</strong>（2024年）</li>
-  </ul>
-
-  <h2>联系方式</h2>
-  <ul>
-    <li>邮箱：zhky@mail.bnu.edu.cn</li>
-    <li>GitHub：<a href="https://github.com/zhengky-hao" target="_blank">zhengky-hao</a></li>
-  </ul>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 
 </body>
 </html>
+
